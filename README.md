@@ -7,6 +7,12 @@ This folder encapsulates the Terraform Provider that issues API calls to the CMD
 This project is meant to be for demonstration purposes only. There are many things that should be improved upon within
 the code before this project would be considered production ready. 
 
+## Go installation
+https://golang.org/doc/install
+
+## Terraform installation
+https://releases.hashicorp.com/terraform/
+
 ## Running the cmdb app
 To run the CMDB app need to perform following steps
 Step 1: cd into /opt/custom-terraform-provider/cmdb considering you have clone code into this directory
