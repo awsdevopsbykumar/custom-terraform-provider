@@ -5,4 +5,4 @@ require (
 	github.com/hashicorp/terraform-plugin-sdk v1.1.1
 )
 
-go 1.12.4
+go 1.16
