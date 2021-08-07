@@ -7,23 +7,33 @@ This folder encapsulates the Terraform Provider that issues API calls to the CMD
 This project is meant to be for demonstration purposes only. There are many things that should be improved upon within
 the code before this project would be considered production ready. 
 
+## Running the cmdb app
+To run the CMDB app need to perform following steps
+Step 1: cd into /opt/custom-terraform-provider/cmdb considering you have clone code into this directory
+```
+cd /opt/custom-terraform-provider/cmdb
+go run main.go
+```
+Output will be look like below
+2021/08/07 18:43:01 Booting up server v1 on 8990
+
 ## Running the example
 
 To run the Terraform Provider locally there are a few steps to complete:
 
-Step 1: Build the source code locally
+Step 1: Change the directory where you have clone the code and build the source code locally
 
 ```
+cd /opt/custom-terraform-provider/terraform-provider-cmdb
 go build -o terraform-provider-cmdb_v1.0.0
 ```
 
-Step 2: Move the executable into the local terraform plugin folder:
+Step 2: Create a directory and move the executable into the local terraform plugin folder:
 
 ```
-mv terraform-provider-cmdb_v1.0.0 ~/terraform.d/plugins/linux_amd64/
+mkdir -p terraform.d/plugins/linux_amd64/
+mv terraform-provider-cmdb_v1.0.0 terraform.d/plugins/linux_amd64/
 ```
-
-> Note: The plugin folder may need to be created.
 
 Step 3: From within this directory, initialize Terraform:
 
